@@ -22,13 +22,19 @@ const db = re.creatData('demo',{
 //     }
 // })
 
-db.find({num:{$gt:20,$lt:40}},'num -_id',{skip:3,limit:5},(err,doc)=>{
-    if(!err){
-        console.log(doc)
-    }
-})
+// db.find({num:{$gt:20,$lt:40}},'num -_id',{skip:3,limit:5},(err,doc)=>{
+//     if(!err){
+//         console.log(doc)
+//     }
+// })
 
 // db.remove({n:null},err=>{
 //     if(!err){
 //         console.log('删除成功')
 //     }
+
+db.count({type:'nums'},(err,count)=>{
+    if(!err){
+        console.log(count)
+    }
+})
