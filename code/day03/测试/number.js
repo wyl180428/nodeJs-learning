@@ -33,8 +33,13 @@ const db = re.creatData('demo',{
 //         console.log('删除成功')
 //     }
 
-db.count({type:'nums'},(err,count)=>{
+// db.count({type:'nums'},(err,count)=>{
+//     if(!err){
+//         console.log(count)
+//     }
+// })
+db.find({$or:[{num:40},{num:50}]},'num -_id',(err,doc)=>{
     if(!err){
-        console.log(count)
+        console.log(doc)
     }
 })
