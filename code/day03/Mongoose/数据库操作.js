@@ -30,11 +30,12 @@ const UserModel = mongoose.model('user',userSchema)
 // }} ))
 
 //查询
-// UserModel.find({},'name age -_id',{limit:2,skip:1},(err,docs)=>{
-//     if(!err){
-//         console.log(docs[0].name)
-//     }
-// })
+UserModel.find({},'name age -_id',{limit:2,skip:1},(err,docs)=>{
+    if(!err){
+        console.log(docs[0].name);
+    }
+})
+// console.log(b)
 
 //修改
 // UserModel.updateOne({name:'fxl'},{$set:{__v:0}},(err)=>{
@@ -51,9 +52,9 @@ const UserModel = mongoose.model('user',userSchema)
 // })
 
 
-UserModel.find({},(err,docs)=>{
-    if(!err){
-        console.log(docs)
-    }
-})
+// UserModel.find({},(err,docs)=>{
+//     if(!err){
+//         console.log(docs)
+//     }
+// })
 
